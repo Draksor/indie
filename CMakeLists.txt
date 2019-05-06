@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.11)
+
+project(indie)
+
+set(CMAKE_CXX_STANDARD 17)
+
+set(INDIE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+add_subdirectory(log)
+add_subdirectory(bomberman)
