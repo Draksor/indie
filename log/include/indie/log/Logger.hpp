@@ -147,8 +147,9 @@ namespace indie::log
         inline void FormatMsg(std::string &to_format, std::size_t &arg_pos, Arg &&arg, Args &&...args) const noexcept
         {
             std::size_t format_pos = to_format.find("{" + std::to_string(arg_pos) + "}");
-            if (format_pos == std::string::npos)
-            return;
+            if (format_pos == std::string::npos) {
+                return;
+            }
             to_format.replace(format_pos, 3, details::StringFormat::ToString(arg));
             arg_pos++;
             FormatMsg(to_format, arg_pos, args...);
