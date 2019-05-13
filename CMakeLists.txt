@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9.2)
+cmake_minimum_required(VERSION 3.11)
 
 project(indie)
 
@@ -8,5 +8,6 @@ set(INDIE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_subdirectory(3rdParty)
 
+add_subdirectory(meta)
 add_subdirectory(log)
 add_subdirectory(bomberman)
