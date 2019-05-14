@@ -10,6 +10,10 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-7
+      install: "./.travis/linux-clang-5.0/dl_deps.sh"
+      script:
+        - "./.travis/linux-gcc-7/build.sh"
+        - "./.travis/linux-gcc-7/tests.sh"
       env:
         - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
     # Linux (Clang 5.0)
@@ -20,20 +24,15 @@ matrix:
             - llvm-toolchain-trusty-5.0
           packages:
             - clang-5.0
-    # OSX (GCC 7)
-    - os: osx
-      osx_image: xcode10.1
-      env:
-        - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7"
+      install: "./.travis/linux-clang-5.0/dl_deps.sh"
+      script:
+        - "./.travis/linux-clang-5.0/build.sh"
+        - "./.travis/linux-clang-5.0/tests.sh"
     # OSX (Xcode 10.1)
     - os: osx
       osx_image: xcode10.1
-
-before_script:
-  - eval "${MATRIX_EVAL}"
-  - mkdir build
-  - cd build
-
-script:
-  - cmake ..
-  - make
+      script:
+        - mkdir build
+        - cd build
+        - cmake ..
+        - make
