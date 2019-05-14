@@ -31,6 +31,9 @@ matrix:
     # OSX (Xcode 10.1)
     - os: osx
       osx_image: xcode10.1
+      before_script:
+        - "chmod +x ./.travis/macos-xcode-10.1/build.sh"
+        - "chmod +x ./.travis/macos-xcode-10.1/tests.sh"
       script:
         - "./.travis/macos-xcode-10.1/build.sh"
         - "./.travis/macos-xcode-10.1/tests.sh"
