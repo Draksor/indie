@@ -230,7 +230,7 @@ namespace indie::ecs
     
     private:
         template <typename TSystem>
-        constexpr void IsValidSystem()
+        static constexpr void IsValidSystem()
         {
             static_assert(std::is_base_of<SystemType, TSystem>(), "TSystem not derived from System");
         }

@@ -6,7 +6,7 @@ A bomberman game build with C++17 and Irrlicht 3D engine
 
 - Windows (MSVC 19.16.27030.1):
  [![Build status](https://ci.appveyor.com/api/projects/status/o7leurve6sbi4u70?svg=true)](https://ci.appveyor.com/project/SylEze/indie)
-- Travis jobs (Linux GCC/Clang and OSX GCC/Clang): [![Build Status](https://travis-ci.com/SylEze/indie.svg?branch=master)](https://travis-ci.com/SylEze/indie)
+- Travis jobs (Linux GCC and OSX): [![Build Status](https://travis-ci.com/SylEze/indie.svg?branch=master)](https://travis-ci.com/SylEze/indie)
 
 **Code analysis (Codacy):**
 
