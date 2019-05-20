@@ -10,4 +10,5 @@ add_subdirectory(3rdParty)
 
 add_subdirectory(meta)
 add_subdirectory(log)
+add_subdirectory(ecs)
 add_subdirectory(bomberman)

@@ -18,6 +18,15 @@ namespace indie::meta
          */
         typedef std::integral_constant<uint16_t, sizeof...(Types)> Size;
     };
+    /**
+     * @brief Creates a new type list from two type lists.
+     * 
+     * @tparam A First type list.
+     * @tparam B Second type list.
+     */
+    template <typename ...A, typename ...B>
+    struct TypeList<TypeList<A...>, TypeList<B...>> : TypeList<A..., B...>
+    {};
 
     /**
      * @brief Tells if a type list contains a type.
@@ -38,7 +47,7 @@ namespace indie::meta
     {};
 
     /**
-     * @brief Concatenates a type list with a type and returns it.
+     * @brief Concatenates a type list with a type in a new list and returns it.
      * 
      * @tparam T Type to append.
      * @tparam TypeList Type of the type list
@@ -51,7 +60,7 @@ namespace indie::meta
         using Type = TypeList<Types..., T>;
     };
     /**
-     * @brief Concatenates a type list with another type list and returns it.
+     * @brief Concatenates a type list with another type list in a new list and returns it.
      * 
      * @tparam A First type list.
      * @tparam B Second type list.
