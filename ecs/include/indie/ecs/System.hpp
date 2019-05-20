@@ -232,7 +232,7 @@ namespace indie::ecs
         template <typename TSystem>
         constexpr void IsValidSystem()
         {
-            static_assert(std::is_base_of<System, TSystem>(), "TSystem not derived from System");
+            static_assert(std::is_base_of<SystemType, TSystem>(), "TSystem not derived from System");
         }
 
         static inline SystemId GenerateTypeId() noexcept
@@ -242,10 +242,10 @@ namespace indie::ecs
             return cur++;
         }
 
-        template <typename System>
+        template <typename TSystem>
         static inline SystemId GetSystemId() noexcept
         {
-            IsValidSystem<System>();
+            IsValidSystem<TSystem>();
 
             static SystemId id{GenerateTypeId()};
 
