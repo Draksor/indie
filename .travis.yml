@@ -11,10 +11,8 @@ matrix:
         - sudo apt-get install -qq g++-8
         - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 90
       script:
-        - "./.travis/linux-gcc-7/build.sh"
-        - "./.travis/linux-gcc-7/tests.sh"
-      env:
-        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+        - "./.travis/linux-gcc-8/build.sh"
+        - "./.travis/linux-gcc-8/tests.sh"
     # OSX (Xcode 10.1)
     - os: osx
       osx_image: xcode10.1
