@@ -1,10 +1,17 @@
 bin/
 build/
 
+# Visual Studio and Visual Sutdio Code config folders.
 .vscode/
+.vs/
 
+# Object files
 *.o
+
+# Static library files
 *.a
+*.lib
+
+# Dynamic library files
 *.so
 *.dll
-*.lib

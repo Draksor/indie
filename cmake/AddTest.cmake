@@ -9,7 +9,4 @@ macro(ADD_TEST target_name directory lib)
     add_executable(${target_name} ${sources})
 
     target_link_libraries(${target_name} gtest gtest_main ${lib})
-
-    set_target_properties(${target_name} PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
 endmacro()

@@ -108,7 +108,7 @@ namespace indie::ecs
             PoolId ID;
 
             /**
-             * @brief Generate a compile time unique identifier for a pool.
+             * @brief Generates a compile time unique identifier for a pool.
              * 
              * @tparam Component Type of the component stored by the pool.
              * @return A unique pool identifier.

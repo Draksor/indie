@@ -1,7 +1,8 @@
 add_executable(bomberman
-    src/Main.cpp)
+    src/Main.cpp
+    src/Window.cpp
+    src/Game.cpp)
 
-target_link_libraries(bomberman log)
+target_link_libraries(bomberman irrlicht log ecs)
 
-set_target_properties(bomberman PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+target_include_directories(bomberman PRIVATE include)
