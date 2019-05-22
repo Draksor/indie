@@ -432,7 +432,7 @@ namespace indie::ecs
          * @return A component or a tuple of components.
          */
         template <typename ...Components>
-        decltype(auto) Get(const Entity et)
+        decltype(auto) Get(const EntityType et)
         {
             if constexpr(sizeof...(Components) == 1) {
                 return GetPool<Components...>()->Get(et);
