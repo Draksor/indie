@@ -1,4 +1,4 @@
-#include "bomberman/Game.hpp"
+#include "indie/bomberman/Game.hpp"
 
 namespace indie::bomberman
 {

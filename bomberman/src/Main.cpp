@@ -3,7 +3,7 @@
 
 #include <indie/log/Logger.hpp>
 
-#include "bomberman/Game.hpp"
+#include "indie/bomberman/Game.hpp"
 
 int main([[maybe_unused]] int ac, [[maybe_unused]] char **av)
 {

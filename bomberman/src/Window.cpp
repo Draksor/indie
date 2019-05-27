@@ -1,4 +1,4 @@
-#include "bomberman/Window.hpp"
+#include "indie/bomberman/Window.hpp"
 
 namespace indie::bomberman
 {
