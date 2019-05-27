@@ -12,9 +12,17 @@ elseif (APPLE)
 
     set(IRRLICHT_LIB_PATH "${IRRLICHT_FRAMEWORK_PATH}/IrrFramework" CACHE INTERNAL "")
     set(IRRLICHT_INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/osx-x64/include" CACHE INTERNAL "")
+elseif (LINUX)
+    set(IRRLICHT_LIB_PATH "${CMAKE_CURRENT_SOURCE_DIR}/linux-x64/libIrrlicht.a" CACHE INTERNAL "")
+    set(IRRLICHT_INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/linux-x64/include" CACHE INTERNAL "")
 endif ()
 
 add_library(irrlicht STATIC IMPORTED GLOBAL)
+
+if (LINUX)
+    set_target_properties(irrlicht PROPERTIES
+        INTERFACE_LINK_LIBRARIES "-lXxf86vm -lXext -lX11 -lGL")
+endif ()
 
 set_target_properties(irrlicht PROPERTIES
     IMPORTED_LOCATION "${IRRLICHT_LIB_PATH}"
