@@ -14,5 +14,6 @@ include("${INDIE_MODULE_PATH}/AddTest.cmake")
 
 add_subdirectory(meta)
 add_subdirectory(log)
+add_subdirectory(event)
 add_subdirectory(ecs)
 add_subdirectory(bomberman)
