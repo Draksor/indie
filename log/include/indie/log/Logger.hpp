@@ -36,13 +36,7 @@ namespace indie::log
         inline Logger(const char *name) noexcept :
             _name(name)
         {}
-        inline Logger(const std::string &name) noexcept :
-            _name(name)
-        {}
         inline Logger(const char *name, LoggerLevel level) noexcept :
-            _name(name), _level(level)
-        {}
-        inline Logger(const std::string &name, LoggerLevel level) noexcept :
             _name(name), _level(level)
         {}
 
